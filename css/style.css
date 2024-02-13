@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    padding: 1rem;
+    flex-flow: row;
+    justify-content: space-around ;
+    align-items: center  ;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* estilos de main con flexbox*/
+main .texto{
+    text-align: center;
+}
+main .img {
+    display: block;
+}
+main .texto h2 span{
+    display: block;
+}
+
+/* estilos boton flexbox */
+main .texto .boton{
+    background-color: lavender;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px lavenderblush;
+}
+
+/* estilos de section flexbox */
+section{
+    background-color: lavender;
+    display: flex;
+    margin-top: 30px;
+    padding: 10px;
+}
+section div{
+    text-align: center;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: right;
+}
+footer p {
+    color: darkseagreen;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+/* estilos de proyecto con grids para mobile*/
+.contenedor div img{
+    width: 60%;
+    height: 10%;
+    object-fit: cover;
+}
+
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(1,40%);
+    gap: 2rem;
+    margin: 3rem 2rem;
+    text-align: center;
+}
+
+
+/* estilos de galeria para mobile */
+.contenedor-galeria .img-7 {
+    display: none;
+}
+
+.contenedor-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor-galeria{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(3, 25%);
+    gap: 10px;
+    margin: 3rem 2rem;
+}
+
+.contenedor-galeria .img-8{
+    grid-column: span 2;
+}
+
+
+/* mq de tablet */
+@media screen and (min-width:600px){
+    .contenedor{
+        grid-template-columns: repeat(1,15%) ;
+        grid-template-rows: repeat(1,20%);
+    }
+    .contenedor-galeria{
+        height: 850px;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows:repeat(3, 1fr 1fr 2fr );
+    }
+    .contenedor-galeria .img-8 {
+        grid-column: span 3;
+    }
+}
+
+/*mq de desktop */
+@media screen and (min-width:1024px){
+    .contenedor{
+        grid-template-columns: repeat(1,30%) ;
+        grid-template-rows: repeat(1,30%);
+    }
+    .contenedor-galeria .img-7 {
+        display: block;
+    }
+    .contenedor-galeria{
+        height: 2850px;
+        grid-template-columns: repeat(3, 700px);
+        grid-template-rows: repeat(5, 900px);
+    }
+    .contenedor-galeria .img-8{
+        grid-column: span 2;
+    }
+    }
+    
+
+
